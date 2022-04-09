@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+  <script>
+    //prompt输出为字符串，parseInt转换为int型
+    var time =parseInt(prompt("今の時間を入力してください"));
+    //判断是否为空
+    if (time != "null" && time != ""){
+      //判断是否在0~24之间
+      if (time >0 && time <= 24){
+        //判断是否在6-10之间
+        if (time >= 6 && time <10){
+            alert("おはようございます");
+          console.log("おはようございます");
+          //判断是否在10-18之间
+        }else if (time >= 10 && time <18){
+          console.log("こんにちは");
+          alert("こんにちは");
+        }else{
+          console.log("こんばんは");
+          alert("こんばんは");
+        }
+      }else{
+          console.log("入力が間違いました。")
+          alert("入力が間違いました。");
+      }
+    }else {
+ console.log("何か入力してください。")
+             alert("何か入力してください。");
+    }
+           
+ 
+  </script>
+
+</head>
+<body>
+
+</body>
+</html>

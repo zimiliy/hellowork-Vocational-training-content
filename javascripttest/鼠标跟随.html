@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //鼠标跟随
+        function move(obj,ev){
+            var oEvent=ev||event;
+            var disX=oEvent.clientX-obj.offsetLeft;
+            var disY=oEvent.clientY-obj.offsetTop;
+            document.onmousemove=function(ev){
+                var oEvent=ev||event;
+                var l=oEvent.clientX-disX;
+                var t=oEvent.clientY-disY;
+                obj.style.left=l+'px';
+                obj.style.top=t+'px';
+            }
+            document.onmouseup=function(){
+                document.onmousemove=null;
+                document.onmouseup=null;
+            }
+        }
+        
+       
+    </script>
+</head>
+<body>
+ <!-- 鼠标跟随    -->
+    <div id="box" style="width:100px;height:100px;background:red;position:absolute;left:100px;top:100px;">
+        <p>鼠标跟随</p>
+    </div>
+    <button onclick="move(box,event)">点击</button>
+    
+</body>
+</html>

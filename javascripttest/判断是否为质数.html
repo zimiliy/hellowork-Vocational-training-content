@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+/*在页面中获取用户输入的数字，并判断该书数是否为质数
+质数:只能被1和它自身整除的数，1不是质数也不是合数，质数必须是大于1的自然数。
+*/
+var num = prompt("请输入一个大于1的整数");
+if(num <= 1 || num !=""){
+    alert("该值不合法");
+}else {
+
+    //循环外默认一个变量是true
+var flag = true; 
+//获取2-num之间的数
+for(var i = 2; i < num; i++ ){
+ if(num % i == 0){
+     //如果num能被i整除，则说明num一定不是质数。
+     //循环内设置flag为flase
+ flag == false;
+ break;
+ }
+
+}
+//如果num是质数则输出
+if(flag){
+alert(num+"是质数");
+
+}else{
+
+    alert("不是质数");
+}
+
+}
+
+</script>
+<body>
+    
+</body>
+</html>
