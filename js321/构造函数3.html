@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>构造函数的修改</title>
+    <script>
+        //创建一个Person构造函数
+        //--在Person构造函数中，为么个对象都添加了一个sayName方法
+        //目前我们的方法是在构造函数之内创建的
+        //也就是构造函数没执行一次就会创建一个新的sayName方法
+        //所有实例的sayName都是唯一的
+        function Person(name,age,gender){
+           this.name = name;
+           this.age = age;
+           this.gender =gender;
+           //向对象中添加一个方法
+           //this.sayName = fun;
+           //将sayName方法在全局作用域中定义
+           //将函数定义在全局作用域中，污染全局作用域命名空间
+           //定义在全局作用域中很不安全
+        //    function fun(){
+        //     alert("hello大家好我是"+this.name);
+        //    }
+    }
+    //向原型中添加sayName方法
+    Person.prototype.sayName=function(){
+        alert("hello大家好我是"+this.name);
+    }
+
+      var per = new Person("qwe",12,"男");
+      per.sayName();
+      
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // 使用字面量来创建正则表达式
+    // 语法 :var 变量 = /正则表达式/匹配模式
+    // 使用字面量来创建正则表达式更加简单
+    // 使用构造函数创建更加灵活
+
+    // var reg = new RegExp("a","i");
+    var reg = /a/i;
+    console.log(typeof reg);
+    console.log(reg.test("abc"));
+
+    //创建一个正则表达式 检查是否有a或者b
+    //使用 | 表示或
+    reg = /a|b/
+//创建一个正则表达式 检查是否有字母 中括号里面也是或的意思
+    reg = /[abcdefghijklmnopqrstuvwxyz]/
+    reg = /a-z/
+    reg = /A-z/  //大小写字母全体
+    reg = /a-z/i  //i忽略大小写
+    reg = /a[abc]e/
+    reg = /a[^ab]e/ //^除了 非
+    //邮件正则
+    reg = /^\w+@\w+(\.\w+)+$/
+    //郵便番号正规表現
+    reg = /^\d{3}-\d{4}$/
+    //電話番号正规表現
+    reg = /^\d{2,4}-\d{2,4}-\d{3,4}$/
+    
+    
+    
+　　
+
+
+</script>
+<body>
+    
+</body>
+</html>

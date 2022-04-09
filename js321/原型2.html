@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function MyClass(){
+
+}
+MyClass.prototype.name= "名字"
+var mc = new MyClass();
+console.log(mc.name);
+//使用in检查对象中是否含
+//有某个属性时，如果对象中没有但是原型中有，也会返回true
+console.log("name" in mc);
+//检查自身中方是否含有该属性
+console.log (mc.hasOwnProperty("age"));
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>
